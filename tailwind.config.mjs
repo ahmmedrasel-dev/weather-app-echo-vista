@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,9 +8,14 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      container: {
+        center: true,
+        padding: {
+          default: "1rem",
+        },
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
       },
     },
   },
