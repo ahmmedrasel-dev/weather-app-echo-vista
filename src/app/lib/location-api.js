@@ -31,3 +31,16 @@ export const getLatAndLon = async (location) => {
     console.error(error.message);
   }
 };
+
+export const getResolveLatLong = async (location, lat, lon) => {
+  if (lat & lon) {
+    return { lat, lon };
+  }
+
+  const locationLatLong = await getLatAndLon(location);
+  if (locationLatLong.latitude & locationLatLong.longitude) {
+    const lat = locationLatLong.latitude;
+    const lon = locationLatLong.longitude;
+    return { lat, lon };
+  }
+};

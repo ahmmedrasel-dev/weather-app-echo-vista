@@ -4,7 +4,7 @@ import Card from "./Card";
 import { getWindData } from "../lib/weather-api";
 
 const WindComponents = async ({ lan, lon }) => {
-  const { speed, deg } = await getWindData(lan, lon);
+  // const { deg } = await getWindData(lan, lon);
   return (
     <Card>
       <h6 className="feature-name">Wind</h6>
@@ -16,8 +16,8 @@ const WindComponents = async ({ lan, lon }) => {
           width={80}
           height={80}
         />
-        <h3 className="feature-title">{speed} meters/sec</h3>
-        <span className="feature-name">{deg} degrees</span>
+        <h3 className="feature-title">0 meters/sec</h3>
+        <span className="feature-name">0 degrees</span>
       </div>
     </Card>
   );
